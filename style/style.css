@@ -32,12 +32,13 @@
     --bg: #0c2d6b;
     --blue-style: #0052cc;
     --colo-style: #091e42;
-    --font-head: "cubano",sans-serif;
-    --font-body: "sofia-pro",sans-serif;
+    --font-head: "cubano", sans-serif;
+    --font-body: "sofia-pro", sans-serif;
     --nav-width: 4em;
- 
+
 
 }
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -52,20 +53,23 @@ body {
     transition: background 0.2s linear;
 }
 
-h1, 
-h2, 
+h1,
+h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: "cubano",sans-serif;
+    font-family: "cubano", sans-serif;
 }
+
 ul {
     list-style: none;
 }
+
 img {
     width: 100%;
 }
+
 a {
     text-decoration: none;
 }
@@ -74,24 +78,26 @@ a {
     transition: transform .5s ease;
 }
 
- /*dark-mode-style*/
- body.night {
+/*dark-mode-style*/
+body.night {
     background-color: var(--black);
     /*
     background-image: linear-gradient(60deg,var(--black),var(--ubunutu));
     */
     color: var(--white);
-  }
-  /*dark mode topnav list*/
+}
+
+/*dark mode topnav list*/
 body.night .topnav-link {
     background-color: var(--gray6);
 }
 
-  /*dark mode section skills card*/
+/*dark mode section skills card*/
 body.night .card-skills {
-    background-image: linear-gradient(60deg,var(--blue),var(--green-light));
+    background-image: linear-gradient(60deg, var(--blue), var(--green-light));
     color: var(--black);
 }
+
 body.night .text-desc-mission {
     border: 1px solid var(--white);
 }
@@ -104,31 +110,36 @@ body.night .hi-gradient {
 
 body.night .label {
     background-color: var(--gray6)
-
 }
+
 body.night .btn {
     color: var(--black);
 }
+
 body.night .section-footer {
-    box-shadow:  0px 0px 9px 0px #aaaaaa;
+    box-shadow: 0px 0px 9px 0px #aaaaaa;
     background-color: var(--gray6);
 }
+
 body.night .gradient-mission-desc {
     color: var(--white);
 }
+
 body.night .social-connect-icon a {
     color: var(--white);
 }
 
-  .checkbox {
+.checkbox {
     opacity: 0;
     position: absolute;
-    
-  }
-  .checkbox:checked + .label .ball {
+
+}
+
+.checkbox:checked+.label .ball {
     transform: translatey(27px);
-  }
-  .label {
+}
+
+.label {
     background-color: var(--white);
     display: grid;
     border-radius: 50px;
@@ -140,11 +151,12 @@ body.night .social-connect-icon a {
     margin-top: 18rem;
     margin-left: 15px;
     position: fixed;
-    box-shadow:  0px 0px 9px 0px #aaaaaa;
-    
-  }
-  .ball {
-    background-image: linear-gradient(60deg,var(--blue),var(--green-light));
+    box-shadow: 0px 0px 9px 0px #aaaaaa;
+
+}
+
+.ball {
+    background-image: linear-gradient(60deg, var(--blue), var(--green-light));
     position: absolute;
     border-radius: 50%;
     left: 3px;
@@ -152,13 +164,15 @@ body.night .social-connect-icon a {
     width: 22px;
     height: 22px;
     transition: transform 0.2s linear;
-  }
-  .fa-moon {
+}
+
+.fa-moon {
     color: var(--orange-light)
-  }
-  .fa-sun {
+}
+
+.fa-sun {
     color: var(--orange-light)
-  }
+}
 
 /*them btn*/
 
@@ -169,19 +183,22 @@ body.night .social-connect-icon a {
     font-weight: 400;
     position: fixed;
     margin-top: 9%;
-    box-shadow:  0px 0px 9px 0px #aaaaaa;
+    box-shadow: 0px 0px 9px 0px #aaaaaa;
     border-radius: 15px;
     margin-left: 15px;
     background-color: var(--white);
 }
+
 .topnav-link a {
     display: flex;
     text-decoration: none;
 }
+
 .topnav-link a i {
     padding: 9px;
     margin-left: -4px;
 }
+
 .topnav-link a:hover {
     transform: scale(1.5);
     transition: 0.5s;
@@ -191,7 +208,7 @@ body.night .social-connect-icon a {
     width: 90px;
     top: 1%;
     margin-left: -6px;
-    position:fixed;
+    position: fixed;
     bottom: 0;
 }
 
@@ -199,7 +216,7 @@ body.night .social-connect-icon a {
 .home-hero {
     display: grid;
     align-content: center;
-    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-top: 3em;
     padding: 3rem 7vw;
     height: 100vh;
@@ -211,13 +228,14 @@ body.night .social-connect-icon a {
     flex-direction: column;
     justify-content: space-between;
     padding: 0 2rem;
-   
+
 }
+
 .gradient-text {
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
-    background-image: linear-gradient(30deg,var(--green-light),var(--blue-light));
     color: transparent;
+    background-image: linear-gradient(30deg, var(--green-light), var(--blue-light));
 }
 
 /*main image grid*/
@@ -229,17 +247,20 @@ body.night .social-connect-icon a {
 .text-lg {
     font-size: 1.5em;
 }
+
 code {
     font-family: monospace;
     font-size: 2rem;
 }
+
 p {
     display: block;
     margin-block-start: 3em;
     margin-block-end: 1em;
 }
+
 .hi-gradient {
-    background-image: linear-gradient(60deg,var(--blue),var(--white));
+    background-image: linear-gradient(60deg, var(--blue), var(--white));
     border-radius: 3px;
     color: var(--h-color);
     padding: 0 4px;
@@ -247,15 +268,17 @@ p {
 
 .hero-buttons {
     max-width: 120px;
-    background-image: linear-gradient(60deg,var(--blue),var(--green-light));
+    background-image: linear-gradient(60deg, var(--blue), var(--green-light));
     border-radius: 3px;
     color: var(--h-color);
     padding: 0 4px;
 }
+
 .btn-blue-outline {
     color: var(--white);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 .btn {
     border-radius: 3px;
     cursor: pointer;
@@ -274,9 +297,11 @@ p {
 .home-heading {
     font-size: 3em;
 }
+
 .text-center {
     text-align: center;
 }
+
 #section-skills {
     height: 100vh;
 }
@@ -288,6 +313,7 @@ p {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .card-skills {
     padding: 15px;
     width: 270px;
@@ -297,12 +323,15 @@ p {
     border-radius: 9px;
     background-color: var(--white);
 }
+
 .card-skills h3 h4 {
     margin-block-start: revert;
 }
+
 .card-skills p {
     margin-block-start: revert;
 }
+
 .card-skills:hover {
     transition: border-color .2s;
     transform: scale(1.1);
@@ -324,17 +353,20 @@ p {
     display: flex;
     margin: 3em;
     flex-wrap: wrap;
-    justify-content:space-around;
+    justify-content: space-around;
 }
+
 .card-image img {
     width: 240px;
 }
+
 .text-desc-mission {
     padding: 15px;
     width: 600px;
     border-radius: 6px;
     border: 1px solid var(--bg);
 }
+
 .text-desc-mission h3 {
     line-height: 3rem;
 }
@@ -344,25 +376,29 @@ p {
 #section-about {
     height: 100vh;
 }
+
 .card-about {
     display: flex;
     margin: 3em;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .card-about img {
     width: 180px;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0px 0px 6px 0px  #aaaaaa;
+    box-shadow: 0px 0px 6px 0px #aaaaaa;
     margin-left: 15rem;
 }
+
 .text-desc-profile {
     padding: 15px;
     width: 500px;
     text-align: justify;
     border-radius: 9px;
 }
+
 .text-desc-profile p {
     font-size: 1.5rem;
     margin-top: 3px;
@@ -374,6 +410,7 @@ p {
     display: grid;
     margin-top: 33px;
 }
+
 .social-connect-icon a {
     color: var(--black);
 }
@@ -393,12 +430,10 @@ p {
 
 /*responsive for mobile */
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}
+@media only screen and (max-width: 600px) {}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {   
-}
+@media only screen and (min-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
@@ -410,14 +445,15 @@ p {
         width: 27px;
         margin-top: 9rem;
     }
+
     .topnav-link a i {
         margin-left: -4px;
     }
-   
+
     .topnav-logo img {
         margin-left: -24px;
     }
-  
+
     /*section mission*/
 
     .setting-image img {
@@ -429,6 +465,7 @@ p {
     .card-about img {
         margin-left: 0.5rem;
     }
+
     .text-desc-profile {
         text-align: justify;
     }
@@ -437,18 +474,15 @@ p {
         display: flex;
         margin-left: 0;
     }
+
     .social-connect-icon i {
         margin-left: 9px;
     }
-   
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-}
-
-
-
+@media only screen and (min-width: 1200px) {}
