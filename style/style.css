@@ -175,7 +175,7 @@ body.night .social-connect-icon a {
     display: grid;
     font-weight: 400;
     position: fixed;
-    margin-top: 9%;
+    margin-top: 50vh;
     box-shadow: 0px 0px 9px 0px #aaaaaa;
     border-radius: 3px;
     background-color: var(--white);
@@ -416,10 +416,25 @@ p {
 
 /*responsive for mobile */
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+    #section-about {
+        height: auto;
+    }
+    #section-mission {
+        height: auto;
+    }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+    .topnav-link {
+        width: 45px;
+        margin-top: 50vh;
+    }
+    .topnav-logo img {
+        margin-left: -2rem;
+    }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
@@ -429,11 +444,11 @@ p {
     /*main topnav */
     .topnav-link {
         width: 45px;
-        margin-top: 9rem;
+        margin-top: 50vh;
     }
 
     .topnav-logo img {
-        margin-left: 0;
+        margin-left: -2rem;
     }
 
     /*Skill section*/
@@ -465,6 +480,7 @@ p {
     .social-connect-icon i {
         margin-left: 9px;
     }
+   
 
 }
 
