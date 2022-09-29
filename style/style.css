@@ -440,6 +440,9 @@ p {
 @media only screen and (max-width: 768px) {
 
     /*themes btn*/
+    #section-about {
+        height: 100vh;
+    }
 
     /*main topnav */
     .topnav-link {
