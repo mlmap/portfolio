@@ -3,6 +3,7 @@
 
 
 
+
 :root {
     --nav-color: #f9edd2;
     --background-color: #f5e4bc;
@@ -78,12 +79,10 @@ a {
     transition: transform .5s ease;
 }
 
+
 /*dark-mode-style*/
 body.night {
     background-color: var(--black);
-    /*
-    background-image: linear-gradient(60deg,var(--black),var(--ubunutu));
-    */
     color: var(--white);
 }
 
@@ -98,9 +97,8 @@ body.night .card-skills {
     color: var(--black);
 }
 
-body.night .text-desc-mission {
-    border: 1px solid var(--white);
-}
+/*dark mode desc*/
+
 
 
 /*gradient text*/
@@ -119,10 +117,6 @@ body.night .btn {
 body.night .section-footer {
     box-shadow: 0px 0px 9px 0px #aaaaaa;
     background-color: var(--gray6);
-}
-
-body.night .gradient-mission-desc {
-    color: var(--white);
 }
 
 body.night .social-connect-icon a {
@@ -148,8 +142,6 @@ body.night .social-connect-icon a {
     align-items: center;
     padding: 5px;
     position: absolute;
-    margin-top: 18rem;
-    margin-left: 15px;
     position: fixed;
     box-shadow: 0px 0px 9px 0px #aaaaaa;
 
@@ -178,14 +170,14 @@ body.night .social-connect-icon a {
 
 /*header-menu-list*/
 .topnav-link {
-    width: 27px;
+    width: 45px;
+    height: auto;
     display: grid;
     font-weight: 400;
     position: fixed;
     margin-top: 9%;
     box-shadow: 0px 0px 9px 0px #aaaaaa;
-    border-radius: 15px;
-    margin-left: 15px;
+    border-radius: 3px;
     background-color: var(--white);
 }
 
@@ -196,7 +188,6 @@ body.night .social-connect-icon a {
 
 .topnav-link a i {
     padding: 9px;
-    margin-left: -4px;
 }
 
 .topnav-link a:hover {
@@ -206,10 +197,8 @@ body.night .social-connect-icon a {
 
 .topnav-logo img {
     width: 90px;
-    top: 1%;
-    margin-left: -6px;
     position: fixed;
-    bottom: 0;
+    bottom: 9rem;
 }
 
 /*main hero sectionn*/
@@ -270,13 +259,12 @@ p {
     max-width: 120px;
     background-image: linear-gradient(60deg, var(--blue), var(--green-light));
     border-radius: 3px;
-    color: var(--h-color);
     padding: 0 4px;
 }
 
 .btn-blue-outline {
     color: var(--white);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:var(--font-body);
 }
 
 .btn {
@@ -364,7 +352,6 @@ p {
     padding: 15px;
     width: 600px;
     border-radius: 6px;
-    border: 1px solid var(--bg);
 }
 
 .text-desc-mission h3 {
@@ -420,7 +407,6 @@ p {
     text-align: center;
     border-top: 1px solid var(--black);
     padding: 1rem;
-    background-color: var(--red-color);
 }
 
 /*scroll*/
@@ -442,16 +428,17 @@ p {
 
     /*main topnav */
     .topnav-link {
-        width: 27px;
+        width: 45px;
         margin-top: 9rem;
     }
 
-    .topnav-link a i {
-        margin-left: -4px;
+    .topnav-logo img {
+        margin-left: 0;
     }
 
-    .topnav-logo img {
-        margin-left: -24px;
+    /*Skill section*/
+    #section-skills  {
+        height: auto;
     }
 
     /*section mission*/
