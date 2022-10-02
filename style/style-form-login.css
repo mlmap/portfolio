@@ -4,10 +4,10 @@
     --gray6: #12181b;
     --black: #000000;
     --white: #ffffff;
-    --blue-color: #0466c8;
+    --blue-color: #1a73e8;
     --hover-color: #e9ecef;
     --border-input: #ced4da;
-    --button-hover: #023e7d;
+    --button-hover: #366bb3;
     --font-body:'Poppins', sans-serif;
 }
 
@@ -38,11 +38,10 @@ a {
 h1,
 h2,
 h3 {
-    font-weight: 400;
+    font-weight: 300;
 }
 p {
-    margin-top: 15px;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 /*main area of section body*/
@@ -56,24 +55,25 @@ main {
 
 /*container cover of main form*/
 .container {
-    width: 450px;
-    height: 530px;
+    margin-top: 50px;
+    width: 360px;
+    height: 400px;
     border: 1px solid var(--border-input);
     border-radius: 6px;
 }
 
 /*section logo and text sign in*/
 .head {
-    margin-top: 2rem;
+    margin-top: 12px;
     text-align: center;
 }
 .head img {
-    width: 100px;
+    width: 80px;
     height: auto;
 }
 
 .head p {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 /*section of main for input*/
@@ -81,18 +81,18 @@ main {
     width: 100%;
     padding: 30px;
     display: grid;
-    margin-top: 15px;
 }
 .main-form input {
     font-family: var(--font-body);
-    font-weight: 400;
-    height: 50px;
+    height: 45px;
     border-style: none;
     border: 1px solid var(--border-input);
     border-radius: 3px;
 }
-.main-form .placeholder {
-    margin: 10px;
+.main-form ::placeholder {
+    padding: 12px;
+    height: 60px;
+    font-weight: 300;
 }
 
 .learn-more {
@@ -100,7 +100,7 @@ main {
 }
 
 .create-acc {
-    margin-top: 40px;
+    margin-top: 30px;
     display:flex;
     justify-content: space-between;
 }
@@ -114,7 +114,8 @@ main {
 }
 
 .create-acc button {
-    width: 70px;
+    width: 60px;
+    height: 30px;
     padding: 9px;
     background-color: var(--blue-color);
     color: var(--white);
@@ -140,12 +141,12 @@ main {
     color: var(--black);
 }
 .footer a {
-    font-size:12px;
+    font-size:10px;
     color: var(--black);
 }
 .language select {
     border-style: none;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 
@@ -160,11 +161,12 @@ main {
     }
     .footer {
         position: absolute;
-        bottom: 10px;
-        justify-content: space-around;
-    }
-    .footer option {
-        margin-left: 100px;
+        bottom: 30px;
+        display: grid;
+        margin-left: 30px;
+    } 
+    .option a {
+        padding-top: 10px;
     }
 
 }
