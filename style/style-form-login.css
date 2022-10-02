@@ -33,7 +33,7 @@ img {
 a {
     text-decoration: none;
     font-size: 12px;
-    color: var(--button-hover);
+    color: var(--blue-color);
 }
 h1,
 h2,
@@ -133,26 +133,35 @@ main {
     display: flex;
     justify-content: space-between;
 }
-.footer .option {
-    display: flex;
-}
-.footer .option a {
-    margin-left: 1rem;
-    color: var(--black);
-}
 .footer a {
-    font-size:10px;
+    font-size: 10px;
     color: var(--black);
 }
-.language select {
+.footer select {
     border-style: none;
+}
+.select-language {
     font-size: 10px;
 }
+.select-language input::placeholder {
+    height: 30px;
+}
+option {
+    border-style: none;
+}
+.detail-list {
+    display: flex;
+}
+.detail-list a {
+    margin-left: 1rem;
+    margin-top: 6px;
+}
+
 
 
 /*responsive for mobile */
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
     main {
         height: 100vh;
     }
@@ -162,11 +171,10 @@ main {
     .footer {
         position: absolute;
         bottom: 30px;
-        display: grid;
         margin-left: 30px;
     } 
-    .option a {
-        padding-top: 10px;
+    .detail-list {
+        padding-left: 30px;
     }
 
 }
