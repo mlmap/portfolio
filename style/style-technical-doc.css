@@ -4,6 +4,8 @@
     --body-color: #023047;
     --link: #0466c8;
     --white: #edf2fb;
+    --black: #000814;
+    --gray: #979dac;
 
 }
 
@@ -11,101 +13,187 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: var(--body-color);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--black);
 }
 
 
 h1 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: var(--body-color);
 }
 a {
     color: var(--body-color);
+    text-decoration: none;
 }
 ul {
     list-style-type: none;
+    font-size: 12px;
 }
 li {
     list-style-type: none;
 }
-
-body {
-    font-family: 'Poppins', sans-serif;
+p {
     font-size: 12px;
 }
 
-/*
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+header {
+    position: fixed;
+    margin: 15px;
+    margin-left: 180px;
+    font-size: 1.8em;
+  }
 
 #sidebar-quicklinks {
     position: fixed;
-    color: white;
-    padding: 15px;
-    margin-left: 50px;
-    width: 300px;
-    top: 0;
-    height: 100vh;
-    overflow: scroll;
-}
-#sidebar-quicklinks a {
-    text-decoration: none;
-}
-#sidebar-quicklinks a:hover {
-    text-decoration:underline;
-}
-.main-detial {
-    position:absolute;
-    margin-left: 360px;
-    padding: 15px;
-    width:600px;
-
-}
-
-.main-detial article {
-    display: grid;
-    margin-bottom: 30px;
-}
-.main-detial a {
-    color: var(--link);
-}
-*/
-#main-wrapper {
-    display: flex;
-    margin: 30px;
-    max-width: 80%;
-    margin-left: 9%;
-    height: 100vh;
-}
-#sidebar-quicklinks {
-    position: fixed;
-    overflow: scroll;
-    height: 100vh;
+    margin-top: 90px;
     width: 270px;
+    margin-left: 180px;
+    overflow: scroll;
+    height: 100vh;
 }
 #sidebar-quicklinks li {
     padding: 9px;
+    width: 100%;
+ 
 }
 
-#sidebar-quicklinks a {
-    text-decoration: none;
+
+#main-detial {
+    margin-left: 500px ;
+    margin-top: 90px;
+    max-width: 600px;
+    line-height: 1.5em;
 }
-#sidebar-quicklinks a:hover {
-    text-decoration: underline;
-}
-.main-detial {
-    width: 600px;
-    margin-left: 18rem;
-}
-.main-detial h1 {
+
+#main-detial article {
+    margin-bottom: 9px;
     padding: 9px;
 }
-.main-detial article {
-    margin-bottom: 15px;
+#main-detial article li {
+    font-size: 12px;
 }
-.main-detial a {
-    color:var(--white)
+
+#main-detial h1 {
+    padding: 9px;
 }
+
+
+#main-detial a {
+    padding: 9px;
+    color:var(--link)
+}
+
+#main-detial article img {
+    width: 500px;
+    height: auto;
+    padding: 30px;
+    margin-left: 30px;
+}
+.noted {
+    background-color: #a2d2ff;
+    padding: 15px;
+    border-radius: 6px;
+}
+.noted strong {
+    background-color: #a2d2ff;
+}
+
+
+/*Responsive*/
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+/*
+
+@media only screen and (max-width: 600px) {
+    #sidebar-quicklinks {
+        position: sticky;
+        width: 20rem;
+        height: 300px;
+        overflow: scroll;
+       
+    }
+    #main-wrapper {
+        display: grid;
+        
+    }
+    .main-detial {
+        position: absolute;
+        margin-left: 5px;
+        width: 330px;
+        margin-top: 33px;
+       
+    }
+    h1 {
+        font-size: 18px;
+
+    }
+
+}
+*/
+
+/*
+@media only screen and (min-width: 600px) {
+    #sidebar-quicklinks {
+        position: sticky;
+        width: 30rem;
+        height: 360px;
+        overflow: scroll;
+       
+    }
+
+    #main-wrapper {
+        display: grid;
+        
+    }
+    .main-detial {
+        position: absolute;
+        margin-left: 5px;
+        width: 450px;
+        margin-top: 33px;
+       
+    }
+    h1 {
+        font-size: 1.6rem;
+
+    }
+
+}
+
+*/
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+/*
+@media only screen and (max-width: 768px) {
+    #main-wrapper {
+        display: flex;
+        
+    }
+    #sidebar-quicklinks {
+        position: sticky;
+        overflow: scroll;
+       
+    }
+    .main-detial {
+       
+       
+    }
+
+
+}
+
+*/
 
 
 
