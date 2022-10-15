@@ -16,25 +16,11 @@
                 <li><a href="#install-basic-software">Installing basic software</a></li>
                 <li><a href="#what-will-your-website-look-like">What will your website look like?</a></li>
                 <li><a href="#dealing-with-files">Dealing with files</a></li>
-                <li><a href="#html-basic">HTML basics</a></li>
-                <li><a href="#">CSS basics</a></li>
-                <li><a href="#">JavaScript basics</a></li>
-                <li><a href="#">Publishing your website</a></li>
-                <li><a href="#">How the web works</a></li> 
-                <li><a href="#"><h3>CSS Layout</h3></a></li>
-                <li><a href="#">CSS layout overview</a></li>
-                <li><a href="#">Introduction to CSS layout </a></li>
-                <li><a href="#">Normal floe</a></li>
-                <li><a href="#">Flexbox</a></li>
-                <li><a href="#">Grids</a></li>
-                <li><a href="#">Floats</a></li>
-                <li><a href="#">Positions</a></li>
-                <li><a href="#">Multiple-column layout</a></li>
-                <li><a href="#">Responsive design</a></li>  
-                <li><a href="#">Beginner's guide to media queries</a></li>
-                <li><a href="#">Legacy layout methods</a></li>
-                <li><a href="#">Supporting older browsers</a></li>
-                <li><a href="#">Assessment: Fundamental layout comprehension</a></li> 
+                <li><a href="#html-basics">HTML basics</a></li>
+                <li><a href="#css-basics">CSS basics</a></li>
+                <li><a href="#javascript-basics">JavaScript basics</a></li>
+                <li><a href="#publishing-your-website">Publishing your website</a></li>
+                <li><a href="#how-the-web-work">How the web works</a></li> 
             </ul>
         </nav>
 
@@ -416,7 +402,7 @@
                     <img src="/img/dealing-with-your-files/file-structure.png" alt="">
                 </article>
             </section>
-            <section id="html-basic" class="html-basic">
+            <section id="html-basics" class="html-basic">
                 <h1>HTML basics</h1>
                 <article>
                     <p>
@@ -502,6 +488,966 @@
                 <article class="code">
                     <code>&lt;p&gt;My cat is &lt;strong&gt; very&lt;&#47;strong&gt; grumpy.&lt;&#47;p&gt;</code>
                 </article>
+            </section>
+            <section id="css-basics" class="css-basic">
+                <h1>CSS basics</h1>
+                <article>
+                    <p>
+                        CSS (Cascading Style Sheets) is the code that styles web content. CSS basics walks through what you need
+                        to get started. We'll answer questions like: How do I make text red? How do I make content display at a
+                        certain location in the (webpage) layout? How do I decorate my webpage with background images and colors?
+                    </p>
+                </article>
+                
+                <article>
+                    <h2>What is CSS?</h2>
+                    <p>
+                        Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet 
+                        language. CSS is what you use to selectively style HTML elements. For example, this CSS selects
+                        paragraph text, setting the color to red: 
+                    </p>
+                </article>
+                <article class="code">
+                    <code>p { <br>
+                    color: red; <br>
+                }</code>
+                </article>
+                <article>
+                    <p>Let's try it out! Using a text editor, paste the three lines of CSS (above) into a new file. Save the file as style.css in a directory named styles.</p>
+                </article>
+                <article>
+                    <p>To make the code work, we still need to apply this CSS (above) to your HTML document. Otherwise, the
+                         styling won't change the appearance of the HTML. (If you haven't been following our project, 
+                         pause here to read Dealing with files and HTML basics.)</p>
+                </article>
+                <article>
+                    <ol>
+                        <li>Open your index.html file. Paste the following line in the head (between the <head> and </head> tags):</li>
+
+                    
+                    <article class="code">
+                        <code>&lt;link href="styles&#47;style.css" rel="stylesheet"&#47;&gt;</code>
+                    </article>
+                    <article>
+                        <li>Save index.html and load it in your browser. You should see something like this:</li>
+                    </article>
+                </ol>
+                <img src="./img/css-basics/website-screenshot-styled.png" alt="website-screenshot-styled">
+                </article>
+                <article><p>If your paragraph text is red, congratulations! Your CSS is working.</p></article>
+                
+                <article>
+                    <h3>Anatomy of a CSS ruleset</h3>
+                    <p>Let's dissect the CSS code for red paragraph text to understand how it works:</p>
+                <img src="./img/css-basics/css-declaration-small.png" alt=" css-declaration-small">
+
+                </article>
+                <article>
+                    <p>he whole structure is called a ruleset. (The term ruleset is often referred to as just rule.) 
+                        Note the names of the individual parts:</p>
+                </article>
+                <article>
+                    <h3>Selector</h3>
+                        <p>
+                            This is the HTML element name at the start of the ruleset. It defines the element(s) 
+                            to be styled (in this example, <p> elements). To style a different element, change the selector.
+                        </p>
+                </article>
+                <article>
+                    <h3>Declaration</h3>
+                        <p>This is a single rule like color: red;. It specifies which of the element's properties you want to style.</p>
+                </article>
+                <article>
+                    <h3>Properties</h3>
+                        <p>These are ways in which you can style an HTML element. (In this example, color is a property of the <p> 
+                            elements.) In CSS, you choose which properties you want to affect in the rule.</p>
+                </article>
+                <article>
+                    <h3>Property value</h3>
+                        <p>To the right of the property—after the colon—there is the property value. This chooses one out of 
+                         many possible appearances for a given property. (For example, there are many color values in addition to red.)</p>
+                </article>
+                <article>
+                    <p>Note the other important parts of the syntax:</p>
+                                <li>Apart from the selector, each ruleset must be wrapped in curly braces. ({})</li>
+                                <li>Within each declaration, you must use a colon (:) to separate the property from its value or values.</li>
+                                <li>Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.</li>
+                </article>
+                <article> <p>To modify multiple property values in one ruleset, write them separated by semicolons, like this:</p></article>
+                <article class="code">
+                    <code>p { <br>
+                            color: red; <br>
+                            width: 500px; <br>
+                            border: 1px solid black;<br>
+                        }
+                </code>
+                </article>
+                <article>
+                    <h2>Selecting multiple elements</h2>
+                    <p>You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors
+                         by commas. For example:</p>
+
+                </article>
+                <article class="code">
+                    <code>
+                        p,<br>
+                        li,<br>
+                        h1 {<br>
+                            color: red;<br>
+
+                        }
+                    </code>
+
+                </article>
+                <article>
+                    <h2>Different types of selectors</h2>
+                    <p>There are many different types of selectors. The examples above use element selectors, which select all
+                         elements of a given type. But we can make more specific selections as well. Here are some of the more 
+                         common types of selectors:
+
+                    </p>
+                    <table class="css-table-selector">
+                        <tr class="table-head">
+                            <th>Selector name</th>
+                            <th>What does it select</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>Element selector (sometimes called a tag or type selector)</td>
+                            <td>All HTML elements of the specified type.</td>
+                            <td><code>p selects &#60;p&#62; </code></td>
+                        </tr>
+                        <tr>
+                            <td>ID selector</td>
+                            <td>The element on the page with the specified ID. On a given HTML page, each id value should be unique.</td>
+                            <td><code>#my-id select &#60;p id=""my-id"&#62; or &#60;a id=""my-id"&#62; </code></td>
+                        </tr>
+                        <tr>
+                            <td>Class selector</td>
+                            <td>The element(s) on the page with the specified class. Multiple instances of the same class can appear on a page.</td>
+                            <td><code>.my-class selects &#60;p class=""my-class"&#62; or &#60;a class""my-class"&#62; </code></td>
+                        </tr>
+                        <tr>
+                            <td>Attribute selector</td>
+                            <td>The element(s) on the page with the specified attribute.</td>
+                            <td><code>img &#91;src&#93; selects &#60;img src="myimage.png"&#62; but not &#60;img&#62; </code></td>
+                        </tr>
+                    </table>
+                    
+                </article>
+                <article>
+                    <p>There are many more selectors to discover. To learn more, see the MDN <a href="#">Selector guides</a></p>
+                </article>
+            </section>
+            <section id="javascript-basics" class="javascript-basics">
+                <h1>JavaScript basics</h1>
+               <article>
+                <p>
+                    JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior
+                    of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc. 
+                    This article helps you get started with JavaScript and furthers your understanding of what is possible.
+                </p>
+               </article>
+               <article>
+                <h2>
+                    What is JavaScript?
+                </h2>
+                <p><a href="#">JavaScript</a> is a powerful programming language that can add interactivity to a website. It was invented by Brendan Eich.</p>
+               </article>
+               <article>
+                <p>JavaScript is versatile and beginner-friendly. With more experience, you'll be able to create games, animated 2D
+                    and 3D graphics, comprehensive database-driven apps, and much more!</p>
+               </article>
+               <article>
+                <p>
+                    JavaScript itself is relatively compact, yet very flexible. Developers have written a variety of tools on top of 
+                    the core JavaScript language, unlocking a vast amount of functionality with minimum effort. These include:
+                </p>
+               </article>
+               <article>
+                <li>Browser Application Programming Interfaces (APIs) built into web browsers, providing functionality such as 
+                    dynamically creating HTML and setting CSS styles; collecting and manipulating a video stream from a user's
+                    webcam, or generating 3D graphics and audio samples.</li>
+                <li>Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such as Twitter or Facebook.</li>
+                <li>Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications.</li>
+               </article>
+               <article>
+                <p>
+                    It's outside the scope of this article—as a light introduction to JavaScript—to present the details of how the core 
+                    JavaScript language is different from the tools listed above. You can learn more in MDN's JavaScript learning area, 
+                    as well as in other parts of MDN.
+                </p>
+               </article>
+               <article>
+                <p>The section below introduces some aspects of the core language and offers an opportunity to play with a few browser 
+                    API features too. Have fun!</p>
+               </article>
+               <article>
+                <h1>A "Hello world!" example</h1>
+                <p>JavaScript is one of the most popular modern web technologies! As your JavaScript skills grow, your websites will
+                     enter a new dimension of power and creativity.</p>
+               </article>
+               <article>
+                <p>However, getting comfortable with JavaScript is more challenging than getting comfortable with HTML and CSS. 
+                You may have to start small, and progress gradually. To begin, let's examine how to add JavaScript to your
+                page for creating a Hello world! example. (Hello world! is the standard for introductory programming examples.)</p>
+               </article>
+               <article>
+                <ol>
+                    <li>Go to your test site and create a new folder named scripts. Within the scripts folder, create a new text 
+                        document called <code>main.js</code> , and save it.</li>
+                    <li>In your <code>index.html</code>  file, enter this code on a new line, just before the closing &#60;&#47;body&#62; tag:</li>
+                    <article class="code">
+                        <code>&#60;script src="scripts&#47;main.js"&#62;&#60;&#47;script&#62;</code>
+                    </article>
+                    <li>This is doing the same job as the <link> element for CSS. It applies the JavaScript to the page, so it can
+                         have an effect on the HTML (along with the CSS, and anything else on the page).</li>
+                    <li>Add this code to the <code>main.js</code>  file:</li>
+                    <article class="code">
+                        <code>
+                            const myHeading = document.querySelector("h1"); <br>
+                            myHeading.textContent = "Hello world!;"
+                        </code>
+                    </article>
+                    <li>Make sure the HTML and JavaScript files are saved. Then load <code> index.html</code> in your browser. You should see something like this:</li>
+                    
+                </ol>
+                <img src="./img/javascript-basic/hello-world.png" alt="">
+                
+               </article>
+               
+               <article>
+                <h3>What happened?</h3>
+                <p>
+                    The heading text changed to Hello world! using JavaScript. You did this by using a function called querySelector() to
+                    grab a reference to your heading, and then store it in a variable called myHeading. This is similar to what we did
+                    using CSS selectors. When you want to do something to an element, you need to select it first.
+                </p>
+               </article>
+               <article>
+                <p>
+                    Following that, the code set the value of the myHeading variable's textContent property (which represents the 
+                    content of the heading) to Hello world!.
+                </p>
+               </article>
+               <article>
+                <p class="noted">
+                    Note: Both of the features you used in this exercise are parts of the Document Object Model (DOM) API, which has the
+                     capability to manipulate documents.
+                </p>
+               </article>
+               <article>
+                <h1>Language basics crash course</h1>
+                <p>
+                    To give you a better understanding of how JavaScript works, let's explain some of the core features of the language. 
+                    It's worth noting that these features are common to all programming languages. If you master these fundamentals, you 
+                    have a head start on coding in other languages too!
+                </p>
+               </article>
+               <article>
+                <h3>Variables</h3>
+                <p>
+                    Variables are containers that store values. You start by declaring a variable with the let keyword, followed by the 
+                    name you give to the variable:
+                </p>
+                
+               </article>
+               <article class="code">
+                <code>let myVariable;</code>
+               </article>
+               <article>
+                <p>
+                    JavaScript is case sensitive. This means <code>myVariable</code>  is not the same as <code>myvariable</code>. If you have problems in your code, 
+                    check the case!
+                </p>
+               </article>
+               <article>
+                <p>After declaring a variable, you can give it a value:</p>
+               </article>
+               <article class="code">
+                <code>myVariable = "Bob";</code>
+
+               </article>
+               <article>
+                <p>Also, you can do both these operations on the same line:</p>
+               </article>
+               <article class="code">
+                <code>let myVariable = "Bob";</code>
+               </article>
+               <article><p>You retrieve the value by calling the variable name:</p></article>
+               <article class="code">
+                <code>myVariable;</code>
+               </article>
+               <article>
+                <p>After assigning a value to a variable, you can change it later in the code:</p>
+               </article>
+               <article class="code">
+                <code>
+                    <code>let myVariable = "Bob";<br>
+                    myVariable = "Steve";</code>
+                </code>
+               </article>
+               <article><p>Note that variables may hold values that have different data types:</p></article>
+               <table>
+                <tr>
+                    <th>Variable</th>
+                    <th>Explaination</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td> <a href="#">String</a></td>
+                    <td>This is a sequence of text known as a string. To signify that the value is a string, enclose it in single quote marks.</td>
+                    <td><code>let myVariable = 'Bob';</code></td>
+                </tr>
+                <tr>
+                    <td><a href="#"> Number</a></td>
+                    <td>This is a number. Numbers don't have quotes around them.</td>
+                    <td><code>let myVariable = 10;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="#"> Boolean</a></td>
+                    <td>This is a True/False value. The words true and false are special keywords that don't need quote marks.</td>
+                    <td><code>let myVariable = true;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="#"> Array</a></td>
+                    <td>This is a structure that allows you to store multiple values in a single reference.</td>
+                    <td><code>let myVariable = &#91;1, 'Bob', 'Steve', 10&#93;;</code> Refer to each member of the array like this: <br>
+                    myVariable&#91;0&#93;, myVariable&#91;1&#93;, etc.</td>
+                </tr>
+                <tr>
+                    <td><a href="#"> Object</a></td>
+                    <td>This can be anything. Everything in JavaScript is an object and can be stored in a variable. Keep this in
+                         mind as you learn.</td>
+                <td>let myVariable = document.querySelector('h1'); All of the above example too.</td>
+                </tr>
+               </table>
+               <article>
+                <p>So why do we need variables? Variables are necessary to do anything interesting in programming. If values couldn't 
+                    change, then you couldn't do anything dynamic, like personalize a greeting message or change an image 
+                    displayed in an image gallery.</p>
+               </article>
+               <article>
+                <h2>Comments</h2>
+                <p>Comments are snippets of text that can be added along with code. The browser ignores text marked as comments. 
+                    You can write comments in JavaScript just as you can in CSS:</p>
+               </article>
+
+               <article class="code">
+                <code>/* <br>
+                Everything in between is a comment. <br>
+                */</code>
+
+               </article>
+             
+               <article>
+                <p>If your comment contains no line breaks, it's an option to put it behind two slashes like this:</p>
+
+               </article>
+               <article class="code">
+                <code>// This is a comment</code>
+               </article>
+
+               <article>
+                <h2>Operators</h2>
+                <p>
+                    An operator is a mathematical symbol that produces a result based on two values (or variables). 
+                    In the following table, you can see some of the simplest operators, along with some examples to try in 
+                    the JavaScript console.
+                </p>
+                <table>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Explanation</th>
+                        <th>Symbol(s)</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <th>Addition</th>
+                        <td>Add two numbers together or combine two strings.</td>
+                        <td><code>+</code></td>
+                        <td><code>6 + 9; <br>
+                        'Hello' + 'world';</code></td>
+                    </tr>
+                    <tr>
+                        <th>Subtraction, Multiplication, Division</th>
+                        <td>These do what you'd expect them to do in basic math.</td>
+                        <td><code>-, *, /</code></td>
+                        <td><code>0 -3; <br>
+                        8 * 2; // multiply in JS is an asterisk <br>
+                        9 / 3</code></td>
+                    </tr>
+                    <tr>
+                        <th>Assignment</th>
+                        <td>As you've seen already: this assigns a value to a variable.</td>
+                        <td><code>=</code></td>
+                        <td> <code>let myVariable = 'Bob';</code></td>
+                    </tr>
+                    <tr>
+                        <th>Strict equality</th>
+                        <td>This performs a test to see if two values are equal. It returns a <code>true/false </code> (Boolean) result.</td>
+                        <td><code>===</code></td>
+                        <td><code>let myVariable = 3; <br> myVariable === 4;
+                        </code></td>
+                    </tr>
+                    <tr>
+                        <th>Not, Does-not-equal</th>
+                        <td>This returns the logically opposite value of what it precedes. It turns a <code>true</code> into a <code>false</code>, 
+                            etc.. When it is used alongside the Equality operator, the negation operator tests whether 
+                            two values are not equal.</td>
+                        <td><code> !, !==</code></td>
+                        <td>For "Not", the basic expression is true, but the comparison returns false because we negate it: <br>
+                        <code>let myVariable = 3; <br>
+                            !(myVariable === 3);</code><br>
+                            "Does-not-equal" gives basically the same result with different syntax. Here we are testing <code> "is
+                             myVariable NOT  equal to 3"</code>. This returns false because myVariable IS equal to 3:
+                             <code>let myVariable = 3;<br>
+                                myVariable !== 3;</code>
+                        </td>
+                    </tr>
+                </table>
+                <p>There are a lot more operators to explore, but this is enough for now. See Expressions and operators for a complete list.</p>
+               </article>
+
+               <article>
+                <p class="noted">
+                    Note: Mixing data types can lead to some strange results when performing calculations. Be careful that you are
+                    referring to your variables correctly, and getting the results you expect. For example, enter '35' + '25' into
+                    your console. Why don't you get the result you expected? Because the quote marks turn the numbers into strings,
+                    so you've ended up concatenating strings rather than adding numbers. If you enter 35 + 25 you'll get the total
+                    of the two numbers.
+                </p>
+
+               </article>
+               <article>
+                <h2>Conditionals</h2>
+                <p>
+                    Conditionals are code structures used to test if an expression returns true or not. A very common form of 
+                    conditionals is the <code>if...else</code> statement. For example:
+                </p>
+               </article>
+
+               <article class="code">
+                <code>let iceCream = "chocolate"; <br>
+                    if (iceCream === "chocolate") { <br>
+                      alert("Yay, I love chocolate ice cream!"); <br>
+                    } else { <br>
+                      alert("Awwww, but chocolate is my favorite…"); <br>
+                    }</code>
+               </article>
+               <article>
+                <p>The expression inside the <code> if ()</code> is the test. This uses the strict equality operator (as described above) to compare 
+                    the variable <code>iceCream</code> with the string <code>chocolate</code> to see if the two are <code>equal</code>. If this comparison returns true, the 
+                    first block of code runs. If the comparison is not <code>true</code>, the second block of code—after the <code>else</code> statement—runs 
+                    instead.</p>
+               </article>
+
+               <article>
+                <h2>Function</h2>
+                <p>Functions are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a 
+                    function that executes when you call the function name in your code. This is a good alternative to repeatedly
+                     writing the same code. You have already seen some uses of functions. For example:</p>
+               </article>
+               <article class="code">
+                <code>let myVariable = document.querySelector("h1");</code>
+               </article>
+               <article class="code">
+                <code>alert("hello!");</code>
+               </article>
+               <article><p>These functions, <code>document.querySelector</code>  and  <code>alert</code>, are built into the browser.</p></article>
+               <article>
+                <p>If you see something which looks like a variable name, but it's followed by parentheses— () —it is likely a function. 
+                    Functions often take arguments: bits of data they need to do their job. Arguments go inside the parentheses, 
+                    separated by commas if there is more than one argument.</p>
+               </article>
+               <article>
+                <p>For example, the alert() function makes a pop-up box appear inside the browser window, but we need to give it a string
+                     as an argument to tell the function what message to display.</p>
+               </article>
+               <article>
+                <p>
+                    You can also define your own functions. In the next example, we create a simple function which takes two numbers as 
+                    arguments and multiplies them:
+                </p>
+               </article>
+               <article class="code">
+                <code>function multiply(num1, num2) { <br>
+                    let result = num1 * num2; <br>
+                    return result; <br>
+                  }</code>
+               </article>
+               <article>
+                <p>Try running this in the console; then test with several arguments. For example:</p>
+               </article>
+               <article class="code">
+                <code>multiply(4, 7); <br>
+                    multiply(20, 20); <br>
+                    multiply(0.5, 3);</code>
+               </article>
+
+               <article>
+                <p class="nored">
+                    Note: The return statement tells the browser to return the result variable out of the function so it is available 
+                    to use. This is necessary because variables defined inside functions are only available inside those functions. 
+                    This is called variable scoping. (Read more about variable scoping.)
+                </p>
+               </article>
+               <article>
+                <h2>Events</h2>
+                <p>
+                    Real interactivity on a website requires event handlers. These are code structures that listen for activity in the
+                    browser, and run code in response. The most obvious example is handling the click event, which is fired by the
+                    browser when you click on something with your mouse. To demonstrate this, enter the following into your console,
+                    then click on the current webpage
+                </p>
+               </article>
+               <article class="code">
+                <code>
+                    document.querySelector("html").addEventListener("click", function () { <br>
+                        alert("Ouch! Stop poking me!"); <br>
+                      });
+                </code>
+               </article>
+               <article>
+                <p>There are a number of ways to attach an event handler to an element. Here we select the <code>&#60;html	&#62;</code> element. We then 
+                    call its <code>addEventListener()</code> function, passing in the name of the event to listen to ( <code>'click'</code> ) and a function to run when the event happens.</p>
+                
+               </article>
+               <article>
+                <p>The function we just passed to addEventListener() here is called an anonymous function, because it doesn't have a 
+                    name. There's an alternative way of writing anonymous functions, which we call an arrow function. An arrow 
+                    function uses () => instead of function ():</p>
+               </article>
+
+               <article class="code">
+                <code>
+                    document.querySelector("html").addEventListener("click", () => { <br>
+                        alert("Ouch! Stop poking me!"); <br>
+                      });
+                </code>
+
+               </article>
+
+               <h1>Supercharging our example website</h1>
+                
+               <article>
+                <p>With this review of JavaScript basics completed (above), let's add some new features to our example site.</p>
+               </article>
+               <article>
+                <p>
+                    Before going any further, delete the current contents of your <code>main.js</code> file — the bit you added earlier during the
+                     "Hello world!" example — and save the empty file. If you don't, the existing code will clash with the new code you are about to add.
+                </p>
+               </article>
+               <article>
+                <h2>Adding an image changer</h2>
+                <p>
+                    In this section, you will learn how to use JavaScript and DOM API features to alternate the display of one of two 
+                    images. This change will happen as a user clicks the displayed image.
+                </p>
+                <ol>
+                    <li>Choose an image you want to feature on your example site. Ideally, the image will be the same size as the 
+                        image you added previously, or as close as possible.</li>
+                    <li>Save this image in your <code>images</code> folder.</li>
+                    <li>Rename the image firefox2.png.</li>
+                    <li>Add the following JavaScript code to your <code>main.js</code> file</li>
+                    <article class="code">
+                        <code>const myImage = document.querySelector("img"); <br>
+        
+                            myImage.onclick = () => { <br>
+                              const mySrc = myImage.getAttribute("src"); <br>
+                              if (mySrc === "images/firefox-icon.png") { <br>
+                                myImage.setAttribute("src", "images/firefox2.png"); <br>
+                              } else { <br>
+                                myImage.setAttribute("src", "images/firefox-icon.png"); <br>
+                              } <br>
+                            };</code>
+                            
+                       </article>
+                    <li>Save all files and load index.html in the browser. Now when you click the image, it should change to the other one.</li>
+                </ol>
+               </article>
+               <article>
+                <p>This is what happened. You stored a reference to your &#60;img&#62; element in the <code>myImage</code> variable. Next, you made this
+                     variable's <code>onclick</code> event handler property equal to a function with no name (an "anonymous" function). So every
+                      time this element is clicked:</p>
+                      <ol>
+                        <li>The code retrieves the value of the image's <code>src</code> attribute.</li>
+                        <li>The code uses a conditional to check if the <code>src</code> value is equal to the path of the original image:
+                        <ol class="lower-roman">
+                            <li>If it is, the code changes the src value to the path of the second image, forcing the other image to be loaded inside the   element.</li>
+                            <li>If it isn't (meaning it must already have changed), the <code>src</code> value swaps back to the original image path, to the original state.</li>
+                        </ol></li>
+                      </ol>
+               </article>
+
+               <article>
+                <h3>Adding a personalized welcome message</h3>
+                <p>
+                    Next, let's change the page title to a personalized welcome message when the user first visits the site. This 
+                    welcome message will persist. Should the user leave the site and return later, we will save the message using 
+                    the Web Storage API. We will also include an option to change the user, and therefore, the welcome message.
+                </p>
+
+               </article>
+               <article>
+                <ol>
+                    <li>In index.html, add the following line just before the &#60;script&#62; element</li>
+                    <article class="code">
+                        <code>&#60;button&#62; Change user &#60;button&#62;</code>
+                    </article>
+                    <li>In <code> main.js</code>, place the following code at the bottom of the file, exactly as it is written. 
+                        This takes references to the new button and the heading, storing each inside variables:</li>
+                        <article class="code">
+                            <code>
+                                let myButton = document.querySelector("button"); <br>
+                                let myHeading = document.querySelector("h1"); <br>
+
+                            </code>
+                        </article>
+                        <li>Add the following function to set the personalized greeting. This won't do anything yet, but this will change soon.</li>
+                        <article class="code">
+                            <code>
+                                function setUserName() { <br>
+                                    const myName = prompt("Please enter your name."); <br>
+                                    localStorage.setItem("name", myName); <br>
+                                    myHeading.textContent = `Mozilla is cool, ${myName}`; <br>
+                                  }
+                            </code>
+                        </article>
+                        <article>
+                            <p>
+                                The setUserName() function contains a prompt() function, which displays a dialog box, similar to alert(). 
+                                This prompt() function does more than alert(), asking the user to enter data, and storing it in a variable 
+                                after the user clicks OK. In this case, we are asking the user to enter a name. Next, the code calls on an
+                                 API localStorage, which allows us to store data in the browser and retrieve it later. We use localStorage's 
+                                 setItem() function to create and store a data item called 'name', setting its value to the myName variable 
+                                 which contains the user's entry for the name. Finally, we set the textContent of the heading to a string, 
+                                 plus the user's newly stored name.
+                            </p>
+                        </article>
+                        <li>Add the following condition block. We could call this initialization code, as it structures the app when it first loads.</li>
+                        <article class="code">
+                            <code>
+                                if (!localStorage.getItem("name")) { <br>
+                                    setUserName(); <br>
+                                  } else { <br>
+                                    const storedName = localStorage.getItem("name"); <br>
+                                    myHeading.textContent = `Mozilla is cool, ${storedName}`; <br>
+                                  }
+                            </code>
+                        </article>
+                        <article>
+                            <p>
+                                This first line of this block uses the negation operator (logical NOT, represented by the !) to check whether the 
+                                name data exists. If not, the setUserName() function runs to create it. If it exists (that is, the user set a user
+                                 name during a previous visit), we retrieve the stored name using getItem() and set the textContent of the heading 
+                                 to a string, plus the user's name, as we did inside setUserName().
+                            </p>
+                        </article>
+                        <li>Put this onclick event handler (below) on the button. When clicked, setUserName() runs. This allows the user to enter a 
+                            different name by pressing the button.</li>
+                            <article class="code">
+                                <code>
+                                    myButton.onclick = () => { <br>
+                                        setUserName(); <br>
+                                      };
+                                </code>
+                            </article>
+                </ol>
+               </article>
+               <article>
+                <h2>A user name of null?</h2>
+                <p>
+                    When you run the example and get the dialog box that prompts you to enter your user name, try pressing the Cancel button. 
+                    You should end up with a title that reads Mozilla is cool, null. This happens because—when you cancel the prompt—the value
+                    is set as null. Null is a special value in JavaScript that refers to the absence of a value.
+                </p>
+               </article>
+               <article>
+                <p>Also, try clicking OK without entering a name. You should end up with a title that reads Mozilla is cool, for fairly obvious reasons.</p>
+               </article>
+               <article>
+                <p>To avoid these problems, you could check that the user hasn't entered a blank name. Update your setUserName() function to this:</p>
+               </article>
+               <article class="code">
+                <code>
+                    function setUserName() { <br>
+                        const myName = prompt("Please enter your name."); <br>
+                        if (!myName) { <br>
+                          setUserName(); <br>
+                        } else { <br>
+                          localStorage.setItem("name", myName); <br>
+                          myHeading.textContent = `Mozilla is cool, ${myName}`; <br>
+                        } <br>
+                      }
+                </code>
+               </article>
+               <article>
+                <p>In human language, this means: If myName has no value, run setUserName() again from the start. If it does have a value 
+                    (if the above statement is not true), then store the value in localStorage and set it as the heading's text.</p>
+               </article>
+
+               <h1>Conclusion</h1>
+               <article>
+                <p>if you have followed all the instructions in this article, you should end up with a page that looks something like
+                     the image below. You can also view our version</p>
+                     <img src="./img/javascript-basic/website-screen-scripted.png" alt="">
+               </article>
+               <article>
+                <p>We have just scratched the surface of JavaScript. If you enjoyed playing, and wish to go further, take advantage of the resources listed below.</p>
+               </article>
+               
+              
+            </section>
+            <section id="publishing-your-website" class="publishing-your-website">
+                <h1>Publishing your website</h1>
+                <article>
+                    <p>
+                        Once you finish writing the code and organizing the files that make up your website, you need to put it all online 
+                        so people can find it. This article explains how to get your simple sample code online with little effort.
+                    </p>
+                </article>
+                <article>
+                    <h2>What are the options?</h2>
+                    <p>Publishing a website is a complex topic because there are many ways to go about it. This article doesn't attempt to document 
+                        all the possible methods. Instead, it explains the advantages and disadvantages of three approaches that are practical 
+                        for beginners. Then it steps through one method that can work right away for many readers.</p>
+                </article>
+                <article>
+                    <h3>Getting hosting and a domain name</h3>
+                    <p>To have more control over content and website appearance, most people choose to buy web hosting and a domain name:</p>
+                    <li> Web hosting is rented space on a hosting company's web server. You put website files on the  web server. The web server
+                         provides website content to website visitors</li>
+                    <li>A domain name is the unique address where people find your website, such as <code>http://www.mozilla.org </code> or <code>http://www.bbc.co.uk. </code>
+                        You can rent your domain name for as many years as you want from a <strong>domain registrar</strong>.</li>
+
+                </article>
+                <article>
+                    <p>Many professional websites go online this way.</p>
+                </article>
+                <article>
+                    <p>
+                        In addition, you will need a File Transfer Protocol (FTP) program (see How much does it cost: software for more details) to 
+                        actually transfer the website files over to the server. FTP programs vary widely, but generally, you have to connect to your
+                         web server using details provided by your hosting company (typically username, password, hostname). Then the program 
+                         shows you your local files and the web server's files in two windows, and provides a way for you to transfer files back
+                        and forth.
+                    </p>
+                    <img src="./img/publishing-your-website/ftp.jpg" alt="ftp">
+
+                </article>
+                <article>
+                    <h3>Tips for finding hosting and domains</h3>
+                </article>
+                <article>
+                    <li>MDN does not promote specific commercial hosting companies or domain name registrars. To find hosting companies and
+                         registrars, just search for "web hosting" and "domain names". All registrars will have a feature to allow you to check 
+                         if the domain name you want is available.</li>
+                    <li>Your home or office internet service provider may provide some limited hosting for a small website. The available feature 
+                        set will be limited, but it might be perfect for your first experiments.</li>
+                        <li>There are also free services available like Neocities, Google Sites, Blogger, and WordPress. Sometimes you get what 
+                            you pay for, but sometimes these resources are good enough for your initial experiments.</li>
+                        <li>Many companies provide hosting and domains.</li>
+                </article>
+                <article>
+                    <h3>Using an online tool like GitHub or Google App Engine</h3>
+                    <p>Some tools let you publish your website online:</p>
+                </article>
+                <article>
+                    <li><a href="#">GitHub</a> GitHub is a "social coding" site. It allows you to upload code repositories for storage in the Git 
+                        <strong>version control</strong> system. 
+                        You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can 
+                        find your GitHub code, use it, learn from it, and improve on it. GitHub has a very useful feature called <a href="#">GitHub Pages</a>,
+                        which allows you to expose website code live on the web.</li>
+                    <li><a href="#">Google App Engine</a> is a powerful platform that lets you build and run applications on Google's infrastructure — whether you
+                         need to build a multi-tiered web application from scratch or host a static website. See 
+                         <a href="#">How do you host your website on 
+                            Google App Engine?</a> for more information.</li>
+                </article>
+                <article><p>These options are usually free, but you may outgrow the limited feature-set.</p></article>
+                <article>
+                    <h3>Using a web-based IDE such as CodePen</h3>
+                    <p>
+                        There are a number of web apps that emulate a website development environment, allowing you to enter HTML, CSS and JavaScript, 
+                        and then display the result of that code as a website — all in one browser tab. Generally speaking, these tools are relatively
+                        easy, great for learning, good for sharing code (for example, if you want to share a technique with or ask for debugging help
+                        from colleagues in a different office), and free (for basic features). They host your rendered page at a unique web address.
+                        However, the features are limited, and these apps usually don't provide hosting space for assets (like images).
+                    </p>
+                </article>
+                <article>
+                    <p>Try playing with some of these examples to find out which one works best for you:</p>
+
+                </article>
+                <article class="list-link">
+                    <li><a href="#">JSFiddle</a> </li>
+                    <li><a href="#">Glitch</a></li>
+                    <li><a href="#">JS Bin</a></li>
+                    <li><a href="#">CodePen</a></li>
+
+                </article>
+               
+                <article>
+                    <img src="./img/publishing-your-website/jsbin-screen.png" alt="jsbin-screen">
+                </article>
+                <article>
+                    <h1>Publishing via GitHub</h1>
+                </article>
+                <article>
+                    <p>Now let's examine how to easily publish your site via GitHub Pages.</p>
+                </article>
+                <article>
+                    <li>First of all, <a href="#">sign up for GitHub</a> and verify your email address.</li>
+                    <li>Next, you need to <a href="#">create a repository</a> to store files.</li>
+                    <li>On this page, in the Repository name box, enter <i>username.github.io</i>, where username is your username. For example,
+                         our friend Bob Smith would enter <i>bobsmith.github.io</i>. Check the <i>"Initialize this repository with a README"</i> box. 
+                         Then click Create repository.</li>
+
+                         <img src="./img/publishing-your-website/github-create-repo.png" alt="github">
+                    <li>Drag and drop the content of your website folder into your repository. Then click Commit changes.</li>
+                    <article>
+                        <p class="noted">
+                            <strong>Note:</strong> Make sure your folder has an <code>index.html</code> file.
+                        </p>
+                    </article>
+                    <li>Navigate your browser to username.github.io to see your website online. For example, for the username chrisdavidmills, 
+                        go to chrisdavidmills.github.io.</li>
+                    
+                        <article>
+                            <p class="noted">
+                                <strong>Note:</strong> It may take a few minutes for your website to go live. If your website does not display immediately, wait a few minutes. Try again.
+                            </p>
+                        </article>
+                </article>
+            </section>
+                <section id="how-the-web-work" class="how-the-web-work">
+                    <h1>How the web works</h1>
+                    <article>
+                        
+                        <p>How the web works provides a simplified view of what happens when you view a webpage in a web browser on your computer or phone.</p>
+                    </article>
+                    <article>
+                        <p>This theory is not essential to writing web code in the short term, but before long you'll really start to benefit from 
+                            understanding what's happening in the background.</p>
+                    </article>
+                    <h2>Clients and servers</h2>
+                   <article>
+                    <p>
+                        Computers connected to the internet are called <strong>clients</strong> and <strong>servers</strong>. A simplified diagram of how they interact might look like this:
+                    </p>
+                    <img src="./img/how-the-web-work/simple-client-server.png" alt="simple-client-server">
+
+                    <li>Clients are the typical web user's internet-connected devices (for example, your computer connected to your Wi-Fi, or your 
+                        phone connected to your mobile network) and web-accessing software available on those devices (usually a web browser like
+                         Firefox or Chrome).</li>
+                    <li>Servers are computers that store webpages, sites, or apps. When a client device wants to access a webpage, a copy of
+                         the webpage is downloaded from the server onto the client machine to be displayed in the user's web browser.</li>
+                    
+                    
+                   </article>
+                   <h1>The other parts of the toolbox</h1>
+                    <article>
+                            <p>The client and server we've described above don't tell the whole story. There are many other parts involved, and we'll describe them below.
+                            </p>
+                    </article>
+                    <article>
+                            <p>For now, let's imagine that the web is a road. On one end of the road is the client, which is like your house. On 
+                                the other end of the road is the server, which is a shop you want to buy something from.</p>
+                                <img src="./img/how-the-web-work/road.jpg" alt="road">
+
+                    </article>
+                    <article>
+                        <p>In addition to the client and the server, we also need to say hello to:</p>
+                    </article>
+                    <article>
+                        <li><strong>Your internet connection</strong>: Allows you to send and receive data on the web. It's basically like the street between 
+                            your house and the shop.</li>
+                        <li><strong>TCP/IP:</strong> Transmission Control Protocol and Internet Protocol are communication protocols that define how data should travel 
+                            across the internet. This is like the transport mechanisms that let you place an order, go to the shop, and buy your 
+                            goods. In our example, this is like a car or a bike (or however else you might get around).</li>
+                        <li><strong>DNS:</strong> Domain Name System is like an address book for websites. When you type a web address in your browser, the browser 
+                            looks at the DNS to find the website's IP address before it can retrieve the website. The browser needs to find out which
+                             server the website lives on, so it can send HTTP messages to the right place (see below). This is like looking up the
+                             address of the shop so you can access it.</li>
+                        <li><strong>HTTP:</strong> Hypertext Transfer Protocol is an application protocol that defines a language for clients and servers to speak to
+                             each other. This is like the language you use to order your goods.</li>
+                        <li><strong>Component files:</strong> A website is made up of many different files, which are like the different parts of the goods you buy 
+                            from the shop. These files come in two main types:
+                        <ol>
+                            <li><strong>Code files:</strong> Websites are built primarily from HTML, CSS, and JavaScript, though you'll meet other technologies a bit later.</li>
+                            <li><strong>Assets:</strong> This is a collective name for all the other stuff that makes up a website, such as images, music, video, Word documents, and PDFs.</li>
+                        </ol></li>
+                    </article>
+                    <h1>So what happens, exactly?</h1>
+                    <article>
+                        <p>When you type a web address into your browser (for our analogy that's like walking to the shop):</p>
+                        
+                    </article>
+                    <article>
+                        <ol>
+                            <li>The browser goes to the DNS server, and finds the real address of the server that the website lives on
+                                 (you find the address of the shop).
+                            </li>
+                            <li>The browser sends an HTTP request message to the server, asking it to send a copy of the website to the client
+                                 (you go to the shop and order your goods). This message, and all other data sent between the client and 
+                                 the server, is sent across your internet connection using TCP/IP.
+                            </li>
+                            <li>If the server approves the client's request, the server sends the client a "200 OK" message, which means
+                                 "Of course you can look at that website! Here it is", and then starts sending the website's files to the
+                                browser as a series of small chunks called data packets (the shop gives you your goods, and you bring
+                                 them back to your house).
+                            </li>
+                            <li>The browser assembles the small chunks into a complete web page and displays it to you (the goods arrive at 
+                                your door — new shiny stuff, awesome!).
+                            </li>
+                        </ol>
+                    </article>
+                    <h1>Order in which component files are parsed</h1>
+                    <article>
+                        <p>When browsers send requests to servers for HTML files, those HTML files often contain &#60;link&#62;
+                        elements referencing external CSS stylesheets and &#60;script&#62; elements referencing external JavaScript scripts.
+                         It's important to know the order in which those files are parsed by the browser as the browser loads the page:</p>
+                         <li>The browser parses the HTML file first, and that leads to the browser recognizing any 
+                            &#60;link&#62;-element references to external CSS stylesheets and any &#60;script&#62;-element references to scripts.
+                        </li>
+                        <li>As the browser parses the HTML, it sends requests back to the server for any CSS files it has found from 
+                            &#60;link&#62; elements, and any JavaScript files it has found from &#60script&#62;
+                             elements, and from those, then parses the CSS and JavaScript.
+                        </li>
+
+                        <li>As the browser builds the DOM tree and applies the styles from the CSSOM tree and executes the JavaScript, a 
+                            visual representation of the page is painted to the screen, and the user sees the page content and can begin to 
+                            interact with it.
+                        </li>
+
+                    </article>
+                    <h1>DNS explained</h1>
+                    <article>
+                        <p>Real web addresses aren't the nice, memorable strings you type into your address bar to find your favorite websites. 
+                            They are special numbers that look like this: <code>63.245.215.20</code>.</p>
+                    </article>
+                    <article>
+                        <p>This is called an IP address, and it represents a unique location on the web. However, it's not very easy to remember,
+                            is it? That's why Domain Name Servers were invented. These are special servers that match up a web address you type
+                            into your browser (like "mozilla.org") to the website's real (IP) address.
+                        </p>
+                    </article>
+                    <article>
+                        <p>Websites can be reached directly via their IP addresses. You can use a DNS lookup tool to find the IP address of a website.</p>
+                    </article>
+                    <h1>Packets explained</h1>
+                    <article>
+                        <p>
+                            Earlier we used the term "packets" to describe the format in which the data is sent from server to client. What do we 
+                            mean here? Basically, when data is sent across the web, it is sent in thousands of small chunks. There are multiple 
+                            reasons why data is sent in small packets. They are sometimes dropped or corrupted, and it's easier to replace small 
+                            chunks when this happens. Additionally, the packets can be routed along different paths, making the exchange faster
+                             and allowing many different users to download the same website at the same time. If each website was sent as a single
+                              big chunk, only one user could download it at a time, which obviously would make the web very inefficient and not 
+                              much fun to use.
+                        </p>
+                    </article>
 
                 
             </section>
