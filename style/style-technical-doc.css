@@ -20,13 +20,19 @@
 
 
 h1 {
-    font-size: 2rem;
+    margin-top: 15px;
+    font-size: 1.6rem;
     font-weight: 500;
     color: var(--body-color);
 }
 h2 {
     font-size: 1.2rem;
     font-weight: 500;
+    color: var(--body-color);
+}
+h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
     color: var(--body-color);
 }
 a {
@@ -44,6 +50,7 @@ ul {
 .code {
     background-color: var(--code-bg);
     padding: 18px;
+    margin-top: 15px;
     border-radius: 6px;
 }
 .code code {
@@ -68,9 +75,9 @@ header {
 #sidebar-quicklinks {
     position: fixed;
     margin-top: 10px;
-    width: 270px;
+    max-width: 270px;
     margin-left: 180px;
-    overflow: scroll;
+    overflow:scroll;
     height: 100vh;
 }
 #sidebar-quicklinks li {
@@ -81,7 +88,7 @@ header {
 #main-detial {
     margin-left: 500px ;
     margin-top: 90px;
-    max-width: 600px;
+    max-width: 630px;
     line-height: 1.5em;
 }
 
@@ -104,13 +111,18 @@ header {
 }
 
 #main-detial article img {
-    width: 450px;
+    width: 540px;
     height: auto;
     border: 1px solid var(--gray);
     border-radius: 5px;
-    margin-left: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+.list-link {
+    font-size: 12px;
+}
+.list-link li {
+    margin: 5px;
 }
 
 
@@ -122,6 +134,10 @@ header {
 .noted strong {
     background-color: #cae9ff;
 }
+.lower-roman {
+    list-style: lower-roman;
+}
+
 
 /*sample code*/
 
@@ -148,96 +164,51 @@ header {
 }
 
 
+table, th, td {
+    border-collapse: collapse;
+    font-size: 12px;
+    border: 1px solid var(--gray);
+    padding: 0.5rem 0.75rem;
+}
+
+
+
 
 /*Responsive*/
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (max-width: 992px) {
+    #sidebar-quicklinks {
+        display: flex;
+        margin-left: 0;
+
+    }
+}
+
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
 
-/*
 
 @media only screen and (max-width: 600px) {
-    #sidebar-quicklinks {
-        position: sticky;
-        width: 20rem;
-        height: 300px;
-        overflow: scroll;
-       
-    }
-    #main-wrapper {
-        display: grid;
-        
-    }
-    .main-detial {
-        position: absolute;
-        margin-left: 5px;
-        width: 330px;
-        margin-top: 33px;
-       
-    }
-    h1 {
-        font-size: 18px;
-
-    }
-
+    
 }
-*/
 
-/*
+
 @media only screen and (min-width: 600px) {
-    #sidebar-quicklinks {
-        position: sticky;
-        width: 30rem;
-        height: 360px;
-        overflow: scroll;
-       
-    }
-
-    #main-wrapper {
-        display: grid;
-        
-    }
-    .main-detial {
-        position: absolute;
-        margin-left: 5px;
-        width: 450px;
-        margin-top: 33px;
-       
-    }
-    h1 {
-        font-size: 1.6rem;
-
-    }
 
 }
 
-*/
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 
-/*
+
 @media only screen and (max-width: 768px) {
-    #main-wrapper {
-        display: flex;
-        
-    }
-    #sidebar-quicklinks {
-        position: sticky;
-        overflow: scroll;
-       
-    }
-    .main-detial {
-       
-       
-    }
 
 
 }
 
-*/
 
 
 
