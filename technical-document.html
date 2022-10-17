@@ -8,8 +8,9 @@
     <title>Technical Document</title>
 </head>
 <body>
-        <header>Web Development</header>
+        
         <nav id="sidebar-quicklinks" class="sidebar">
+            <h1>Web Development</h1>
             <ul>
                 <li><a href="#getting-start-with-the-web-overview"><h3>Complete beginners start here!</h3></a></li>
                 <li><a href="#getting-start-with-the-web-overview">Getting started with the web</a></li>
@@ -22,6 +23,9 @@
                 <li><a href="#publishing-your-website">Publishing your website</a></li>
                 <li><a href="#how-the-web-work">How the web works</a></li> 
             </ul>
+            <ul>
+                <li><a href="index.html">Back to homepage</a></li>
+            </ul>
         </nav>
 
         <main id="main-detial">
@@ -33,15 +37,18 @@
                         You'll set up the tools you need to construct a simple webpage and publish your own simple code.
                     </p>
                 </article>
-                <h2>The story of your first website</h2>
+                
                 <article>
+                    <h2>The story of your first website</h2>
                     <p>
                         It's a lot of work to create a professional website, so if you're new to web development, we encourage you to start small. 
                         You won't build another Facebook right away, but it's not hard to make your own simple website online, so we'll start there.
                     </p>
                 </article>
-                <h2>Guides</h2>
-                <article><p> working through the articles listed below, you will go from nothing to getting your first webpage online. Let's begin our journey!</p></article>
+                
+                <article>
+                    <h2>Guides</h2>
+                    <p> working through the articles listed below, you will go from nothing to getting your first webpage online. Let's begin our journey!</p></article>
                 <div><a href="#">Installing basic software</a></div>
                 <article>
                     <p>
@@ -346,20 +353,18 @@
                         <li>Open up your <code>index.html</code>file, and insert the following code into the file exactly as shown. Don't worry about what it all means for now
                              — we'll look at the structures in more detail later in the series.</li>
 
-                        <pre class="html-translate">
-                            <code>
-                                <span class="doctype">&lt;!DOCTYPE html &gt; </span>
-                                <span class="html">&lt; html lang="en-US"&gt;</span>
-                                <span class="html-head">&lt;head&gt;</span>
-                                <span class="html-meta">&lt; meta charset="utf-8"&#47;&gt;</span>
-                                <span class="html-title">&lt; title &gt;My test page&lt; title &#47;&gt;</span>
-                                <span class="html-endtag-head">&lt;head&#47;&gt;</span>
-                                <span class="html-body">&lt;body&gt;</span>
-                                <span class="html-img">&lt;img src="" alt="My test image"&#47;&gt;</span>
-                                <span class="html-endtag-body">&lt;body&#47;&gt;</span>
-                                <span class="html-endtag-html">&lt;html&#47;&gt;</span>
-                            </code>
-                        </pre>
+                        <div class="html-translate">
+                                <span class="doctype">&lt;!DOCTYPE html&gt; </span> <br>
+                                <span class="html">&lt; html lang="en-US"&gt;</span> <br>
+                                <span class="html-head">&lt;head&gt;</span> <br>
+                                <span class="html-meta">&lt;meta charset="utf-8"&#47;&gt;</span> <br>
+                                <span class="html-title">&lt;title&gt;My test page&lt;&#47; title &gt;</span> <br>
+                                <span class="html-endtag-head">&lt;&#47;head&gt;</span> <br>
+                                <span class="html-body">&lt;&#47;body&gt;</span> <br>
+                                <span class="html-img">&lt;img src="" alt="My test image"&#47;&gt;</span> <br>
+                                <span class="html-endtag-body">&lt;&#47;body&gt;</span> <br>
+                                <span class="html-endtag-html">&lt;&#47;html&gt;</span>
+                        </div>
                         <li>The line <code>&lt;img src="" alt="My test image"</code>is the HTML code that inserts an imageinto the page. We
                             need to tell the HTML where the image is. The image is inside the images directory, which is in the same directory
                             as <code>index.html </code>. To walk down the file structure from index.html to our image, the file path we'd need is
@@ -1448,9 +1453,10 @@
                               much fun to use.
                         </p>
                     </article>
-
-                
             </section>
+            <div class="copyright">
+                <p> <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">Copyright from MDN _developer.mozilla.org </a></h3>
+            </div>
         </main>
 </body>
 </html>
